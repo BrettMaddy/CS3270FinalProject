@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CS3270FinalProject Maddy</string>
+    <string name="enter_food_intake">Enter Food Intake</string>
+    <string name="enter_exercise">Enter Exercise</string>
+    <string name="enter_weight">Enter Weight</string>
+    <string name="fitness_journal">Fitness Journal</string>
+    <string name="grams_of_carbs">Grams of Carbs:</string>
+    <string name="grams_of_protein">Grams of Protein:</string>
+    <string name="list">list</string>
+    <string name="edit">edit</string>
+    <string name="delete">delete</string>
+    <string name="number_of_calories">Number of Calories:</string>
+    <string name="grams_of_fat">Grams of Fat:</string>
+    <string name="save">save</string>
+    <string name="action_settings">settings</string>
+    <string name="biceps_and_back">Biceps and Back</string>
+    <string name="triceps_and_chest">Triceps and Chest</string>
+    <string name="abs_core">Abs/Core</string>
+    <string name="legs">Legs</string>
+    <string name="enter_your_weight">Enter Your Weight:</string>
+    <string name="bicep_curls">Curls</string>
+    <string name="pullups">Pull Ups</string>
+    <string name="chinups">Chinups</string>
+    <string name="crunches">Crunches</string>
+    <string name="leg_raises">Leg Raises</string>
+    <string name="bicycles">Bicycles</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoulder_press">Shoulder Press</string>
+    <string name="dips">Dips</string>
+    <string name="pushups">Pushups</string>
+    <string name="lunges">Lunges</string>
+    <string name="calf_raises">Calf Raises</string>
+    <string name="squat_thrusts">Squat Thrusts</string>
+</resources>
