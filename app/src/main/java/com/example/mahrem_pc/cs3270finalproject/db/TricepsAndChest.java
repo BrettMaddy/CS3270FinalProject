@@ -24,7 +24,7 @@ public class TricepsAndChest
     @ColumnInfo(name = "dips")
     private int dips;
 
-    @ColumnInfo(name = "shouldPress")
+    @ColumnInfo(name = "shoulderPress")
     private int shoulderPress;
 
     public int getPushups() {

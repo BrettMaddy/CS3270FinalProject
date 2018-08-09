@@ -11,8 +11,14 @@ import java.util.List;
 @Dao
 public interface WeightDAO
 {
-    @Query("SELECT * FROM Weight WHERE date = :date")
-    List<Weight> getWeightDiff(String date);
+    @Query("SELECT * FROM Weight")
+    List<Weight> selectAllWeight();
+
+    @Query("SELECT MAX(_id) FROM Weight")
+    int selectMostRecentWeightId();
+
+    @Query("SELECT weight FROM Weight WHERE _id = :id")
+    double selectWeight(int id);
 
     @Insert
     void insertWeight(Weight weight);

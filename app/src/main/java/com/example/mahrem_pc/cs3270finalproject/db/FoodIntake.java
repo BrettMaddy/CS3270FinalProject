@@ -7,13 +7,12 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class FoodIntake
 {
-    public FoodIntake(double calories, double carbs, double protein, double fat, String date)
+    public FoodIntake(double calories, double carbs, double protein, double fat)
     {
         setCalories(calories);
         setCarbs(carbs);
         setProtein(protein);
         setFat(fat);
-        setDate(date);
     }
 
     @PrimaryKey(autoGenerate = true)
@@ -31,9 +30,6 @@ public class FoodIntake
 
     @ColumnInfo(name = "fat")
     private double fat;
-
-    @ColumnInfo(name = "date")
-    private String date;
 
     public int get_id()
     {
@@ -78,16 +74,6 @@ public class FoodIntake
     public void setFat(double fat)
     {
         this.fat = fat;
-    }
-
-    public String getDate()
-    {
-        return date;
-    }
-
-    public void setDate(String date)
-    {
-        this.date = date;
     }
 
     public void set_id(int _id) {

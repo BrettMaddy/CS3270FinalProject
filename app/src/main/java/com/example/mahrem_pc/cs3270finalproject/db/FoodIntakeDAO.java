@@ -11,43 +11,34 @@ import java.util.List;
 @Dao
 public interface FoodIntakeDAO
 {
-    @Query("SELECT * FROM FoodIntake")
-    List<FoodIntake> getAllFoodIntake();
+    @Query("SELECT calories FROM FoodIntake")
+    List<Double> selectAllCalories();
 
-    @Query("SELECT calories FROM FoodIntake WHERE date = :date")
-    List<Double> getAllCalories(String date);
+    @Query("SELECT MAX(_id) FROM FoodIntake")
+    int selectMostRecentFoodIntakeId();
 
-    @Query("SELECT carbs FROM FoodIntake WHERE date = :date")
-    List<Double> getAllCarbs(String date);
+    @Query("SELECT calories FROM FoodIntake WHERE _id = :id")
+    double selectCalories(int id);
 
-    @Query("SELECT protein FROM FoodIntake WHERE date = :date")
-    List<Double> getAllProtein(String date);
+    @Query("SELECT carbs FROM FoodIntake")
+    List<Double> selectAllCarbs();
 
-    @Query("SELECT fat FROM FoodIntake WHERE date = :date")
-    List<Double> getAllFat(String date);
+    @Query("SELECT carbs FROM FoodIntake WHERE _id = :id")
+    double selectCarbs(int id);
+
+    @Query("SELECT protein FROM FoodIntake")
+    List<Double> selectAllProtein();
+
+    @Query("SELECT protein FROM FoodIntake WHERE _id = :id")
+    double selectProtein(int id);
+
+    @Query("SELECT fat FROM FoodIntake")
+    List<Double> selectAllFat();
+
+    @Query("SELECT fat FROM FoodIntake WHERE _id = :id")
+    double selectFat(int id);
 
     @Insert
     void insertFoodIntake(FoodIntake... foodIntakes);
-
-    /*@Update
-    void updateFoodIntake(FoodIntake... foodIntakes);
-
-    @Update
-    void updateCalories(Double calories);
-
-    @Update
-    void updateCarbs(Double carbs);
-
-    @Update
-    void updateProtein(Double protein);
-
-    @Update
-    void updateFat(Double fat);
-
-    @Update
-    void updateDate(String date);
-
-    @Delete
-    void deleteFoodIntake(FoodIntake foodIntake);*/
 
 }

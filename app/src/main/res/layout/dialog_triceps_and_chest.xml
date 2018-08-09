@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvTricepsAndChestProgressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/triceps_and_chest_progress"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tvPushupsProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/difference_in_pushups"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tvDipsProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/difference_in_dips"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tvShoulderPressProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/difference_in_shoulder_presses"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnTricepsAndChestProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>

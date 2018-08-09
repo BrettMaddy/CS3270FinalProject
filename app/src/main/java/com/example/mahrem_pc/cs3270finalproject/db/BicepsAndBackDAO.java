@@ -7,21 +7,27 @@ import java.util.List;
 
 public interface BicepsAndBackDAO
 {
-    @Query("SELECT * FROM BicepsAndBack")
-    List<FoodIntake> getAllBicepsAndBack();
+    @Query("SELECT curls FROM BicepsAndBack")
+    List<Integer> selectAllCurls();
 
-    @Query("SELECT calories FROM FoodIntake WHERE date = :date")
-    List<Double> getAllCalories(String date);
+    @Query("SELECT MAX(_id) FROM BicepsAndBack")
+    int selectMostRecentBicepsAndBackId();
 
-    @Query("SELECT carbs FROM FoodIntake WHERE date = :date")
-    List<Double> getAllCarbs(String date);
+    @Query("SELECT curls FROM BicepsAndBack WHERE _id = :_id")
+    int selectCurls(int _id);
 
-    @Query("SELECT protein FROM FoodIntake WHERE date = :date")
-    List<Double> getAllProtein(String date);
+    @Query("SELECT pullups FROM BicepsAndBack")
+    List<Integer> selectAllPullups();
 
-    @Query("SELECT fat FROM FoodIntake WHERE date = :date")
-    List<Double> getAllFat(String date);
+    @Query("SELECT pullups FROM BicepsAndBack WHERE _id = :_id")
+    int selectPullups(int _id);
+
+    @Query("SELECT chinups FROM BicepsAndBack")
+    List<Integer> selectAllChinups();
+
+    @Query("SELECT chinups FROM BicepsAndBack WHERE _id = :_id")
+    int selectChinups(int _id);
 
     @Insert
-    void insertFoodIntake(FoodIntake... foodIntakes);
+    void insertBicepsAndBack(BicepsAndBack... bicepsAndBacks);
 }

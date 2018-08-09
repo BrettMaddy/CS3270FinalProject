@@ -7,10 +7,9 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class Weight
 {
-    public Weight(double weight, String date)
+    public Weight(double weight)
     {
         setWeight(weight);
-        setDate(date);
     }
 
     @PrimaryKey(autoGenerate = true)
@@ -19,9 +18,6 @@ public class Weight
 
     @ColumnInfo(name = "weight")
     private double weight;
-
-    @ColumnInfo(name = "date")
-    private String date;
 
     public int get_id() { return _id; }
 
@@ -32,15 +28,6 @@ public class Weight
 
     public void setWeight(double weight) {
         this.weight = weight;
-    }
-
-    public String getDate()
-    {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public void set_id(int _id) {

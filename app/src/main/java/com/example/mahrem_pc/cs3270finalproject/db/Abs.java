@@ -42,7 +42,7 @@ public class Abs
         this.bicycles = bicycles;
     }
 
-    @ColumnInfo(name = "cruncehs")
+    @ColumnInfo(name = "crunches")
 
     private int crunches;
 

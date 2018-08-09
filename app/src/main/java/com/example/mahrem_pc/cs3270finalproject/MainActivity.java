@@ -57,21 +57,21 @@ public class MainActivity extends AppCompatActivity implements HomePageFragment.
 
     @Override
     public void onBicepsAndBackButtonClicked() {
-        fm.beginTransaction().replace(exerciseFragment.getView().getId(), bicepsAndBackFragment).addToBackStack(null).commit();
+        fm.beginTransaction().replace(exerciseFragment.getId(), bicepsAndBackFragment).addToBackStack(null).commit();
     }
 
     @Override
     public void onTricepsAndChestButtonClicked() {
-        fm.beginTransaction().replace(exerciseFragment.getView().getId(), tricepsAndChestFragment).addToBackStack(null).commit();
+        fm.beginTransaction().replace(exerciseFragment.getId(), tricepsAndChestFragment).addToBackStack(null).commit();
     }
 
     @Override
     public void onAbsButtonClicked() {
-        fm.beginTransaction().replace(exerciseFragment.getView().getId(), absFragment).addToBackStack(null).commit();
+        fm.beginTransaction().replace(exerciseFragment.getId(), absFragment).addToBackStack(null).commit();
     }
 
     @Override
     public void onLegsButtonClicked() {
-        fm.beginTransaction().replace(exerciseFragment.getView().getId(), legsFragment).addToBackStack(null).commit();
+        fm.beginTransaction().replace(exerciseFragment.getId(), legsFragment).addToBackStack(null).commit();
     }
 }

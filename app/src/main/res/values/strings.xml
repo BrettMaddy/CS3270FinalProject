@@ -24,8 +24,6 @@
     <string name="crunches">Crunches</string>
     <string name="leg_raises">Leg Raises</string>
     <string name="bicycles">Bicycles</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="shoulder_press">Shoulder Press</string>
     <string name="dips">Dips</string>
@@ -33,4 +31,31 @@
     <string name="lunges">Lunges</string>
     <string name="calf_raises">Calf Raises</string>
     <string name="squat_thrusts">Squat Thrusts</string>
+    <string name="empty">""</string>
+    <string name="food_intake_progress">Food Intake Progress</string>
+    <string name="difference_in_calories">Difference in Calories:</string>
+    <string name="difference_in_protein">Difference in Protein:</string>
+    <string name="difference_in_carbs">Difference in Carbs:</string>
+    <string name="difference_in_fat">Difference in Fat:</string>
+    <string name="done">Done</string>
+    <string name="grams">g</string>
+    <string name="lbs">lbs</string>
+    <string name="difference_in_curls">Difference in Curls:</string>
+    <string name="biceps_and_back_progress">Biceps and Back Progress</string>
+    <string name="difference_in_pullups">Difference in Pullups:</string>
+    <string name="difference_in_chinups">Difference in Chinups:</string>
+    <string name="triceps_and_chest_progress">Triceps and Chest Progress</string>
+    <string name="difference_in_pushups">Difference in Pushups:</string>
+    <string name="difference_in_dips">Difference in Dips:</string>
+    <string name="difference_in_shoulder_presses">Difference in Shoulder Presses:</string>
+    <string name="abs_progress">Abs Progress</string>
+    <string name="difference_in_crunches">Difference in Crunches:</string>
+    <string name="difference_in_leg_raises">Difference in Leg Raises:</string>
+    <string name="difference_in_bicycles">Difference in Bicycles:</string>
+    <string name="difference_in_squat_thrusts">Difference in Squat Thrusts:</string>
+    <string name="difference_in_calf_raises">Difference in Calf Raises:</string>
+    <string name="difference_in_lunges">Difference in Lunges:</string>
+    <string name="legs_progress">Legs Progress</string>
+    <string name="difference_in_weight">Difference in Weight:</string>
+    <string name="weight_progress">Weight Progress</string>
 </resources>
