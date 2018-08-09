@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity implements HomePageFragment.OnOptionButtonClicked,
                                                                 ExerciseFragment.OnExerciseButtonClicked{
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements HomePageFragment.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.mainToolbar);
+        setSupportActionBar(toolbar);
 
         homePageFragment = new HomePageFragment();
         foodIntakeFragment = new FoodIntakeFragment();

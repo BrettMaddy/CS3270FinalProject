@@ -3,13 +3,19 @@ package com.example.mahrem_pc.cs3270finalproject;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.mahrem_pc.cs3270finalproject.db.AppDatabase;
 import com.example.mahrem_pc.cs3270finalproject.db.Weight;
@@ -22,7 +28,10 @@ public class WeightFragment extends Fragment {
 
     private View root;
     private EditText etWeight;
+    private TextView tvWeightProgress;
     private double weightdifference = 0;
+    private Button btnWeightProgressDone;
+    private ActionBar actionBar;
 
     public WeightFragment() {
         // Required empty public constructor
@@ -34,7 +43,18 @@ public class WeightFragment extends Fragment {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_weight, container, false);
 
+        Toolbar toolbar = (Toolbar)root.findViewById(R.id.weightToolbar);
+        toolbar.setTitle(R.string.weight_title);
+
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+
+        actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+
+        setHasOptionsMenu(true);
+
         etWeight = (EditText)root.findViewById(R.id.etWeight);
+        tvWeightProgress = (TextView)root.findViewById(R.id.tvWeightProgress);
+        btnWeightProgressDone = (Button)root.findViewById(R.id.btnWeightProgress);
 
         return root;
     }
@@ -70,11 +90,7 @@ public class WeightFragment extends Fragment {
 
             case R.id.action_list:
 
-                Thread thread1 = new Thread();
-
-
-
-            new Thread(new Runnable() {
+                new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Weight weight;
@@ -92,7 +108,22 @@ public class WeightFragment extends Fragment {
 
                         weightdifference = mostCurrentWeight - yesterdaysWeight;
 
+                        AlertDialog.Builder builder = new AlertDialog.Builder(root.getContext());
+                        View view = getLayoutInflater().inflate(R.layout.dialog_weight, null);
 
+                        etWeight.setText(etWeight.getText().toString() + " " + weightdifference);
+
+                        builder.setView(view);
+
+                        final AlertDialog dialog = builder.create();
+                        dialog.show();
+
+                        btnWeightProgressDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.dismiss();
+                            }
+                        });
                     }
                 }).start();
 
