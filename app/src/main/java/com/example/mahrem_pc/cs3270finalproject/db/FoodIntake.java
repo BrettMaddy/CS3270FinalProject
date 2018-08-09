@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class FoodIntake
 {
-    public FoodIntake(double calories, double carbs, double protein, double fat)
+    public FoodIntake(int calories, int carbs, int protein, int fat)
     {
         setCalories(calories);
         setCarbs(carbs);
@@ -20,58 +20,58 @@ public class FoodIntake
     private int _id;
 
     @ColumnInfo(name = "calories")
-    private double calories;
+    private int calories;
 
     @ColumnInfo(name = "carbs")
-    private double carbs;
+    private int carbs;
 
     @ColumnInfo(name = "protein")
-    private double protein;
+    private int protein;
 
     @ColumnInfo(name = "fat")
-    private double fat;
+    private int fat;
 
     public int get_id()
     {
         return _id;
     }
 
-    public double getCalories()
+    public int getCalories()
     {
         return calories;
     }
 
-    public void setCalories(double calories)
+    public void setCalories(int calories)
     {
         this.calories = calories;
     }
 
-    public double getCarbs()
+    public int getCarbs()
     {
         return carbs;
     }
 
-    public void setCarbs(double carbs)
+    public void setCarbs(int carbs)
     {
         this.carbs = carbs;
     }
 
-    public double getProtein()
+    public int getProtein()
     {
         return  protein;
     }
 
-    public void setProtein(double protein)
+    public void setProtein(int protein)
     {
         this.protein = protein;
     }
 
-    public double getFat()
+    public int getFat()
     {
         return fat;
     }
 
-    public void setFat(double fat)
+    public void setFat(int fat)
     {
         this.fat = fat;
     }

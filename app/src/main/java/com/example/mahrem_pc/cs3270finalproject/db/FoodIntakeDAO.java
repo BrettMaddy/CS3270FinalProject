@@ -12,31 +12,31 @@ import java.util.List;
 public interface FoodIntakeDAO
 {
     @Query("SELECT calories FROM FoodIntake")
-    List<Double> selectAllCalories();
+    List<Integer> selectAllCalories();
 
     @Query("SELECT MAX(_id) FROM FoodIntake")
     int selectMostRecentFoodIntakeId();
 
     @Query("SELECT calories FROM FoodIntake WHERE _id = :id")
-    double selectCalories(int id);
+    int selectCalories(int id);
 
     @Query("SELECT carbs FROM FoodIntake")
-    List<Double> selectAllCarbs();
+    List<Integer> selectAllCarbs();
 
     @Query("SELECT carbs FROM FoodIntake WHERE _id = :id")
-    double selectCarbs(int id);
+    int selectCarbs(int id);
 
     @Query("SELECT protein FROM FoodIntake")
-    List<Double> selectAllProtein();
+    List<Integer> selectAllProtein();
 
     @Query("SELECT protein FROM FoodIntake WHERE _id = :id")
-    double selectProtein(int id);
+    int selectProtein(int id);
 
     @Query("SELECT fat FROM FoodIntake")
-    List<Double> selectAllFat();
+    List<Integer> selectAllFat();
 
     @Query("SELECT fat FROM FoodIntake WHERE _id = :id")
-    double selectFat(int id);
+    int selectFat(int id);
 
     @Insert
     void insertFoodIntake(FoodIntake... foodIntakes);
