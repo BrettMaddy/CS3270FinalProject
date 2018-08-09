@@ -39,7 +39,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/etBicepCurls"
+                android:id="@+id/etCurls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />

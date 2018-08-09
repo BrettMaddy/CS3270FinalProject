@@ -22,4 +22,8 @@ public abstract class AppDatabase extends RoomDatabase
 
     public abstract FoodIntakeDAO foodIntakeDAO();
     public abstract WeightDAO weightDAO();
+    public abstract AbsDAO absDAO();
+    public abstract BicepsAndBackDAO bicepsAndBackDAO();
+    public abstract TricepsAndChestDAO tricepsAndChestDAO();
+    public abstract LegsDAO legsDAO();
 }

@@ -18,7 +18,6 @@ import android.widget.TextView;
 
 import com.example.mahrem_pc.cs3270finalproject.db.AppDatabase;
 import com.example.mahrem_pc.cs3270finalproject.db.FoodIntake;
-import com.example.mahrem_pc.cs3270finalproject.db.Weight;
 
 
 /**
@@ -110,9 +109,6 @@ public class FoodIntakeFragment extends Fragment {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-
-
-
 
                         FoodIntake foodIntake = new FoodIntake(cals, carbs, prot, fat);
                         AppDatabase.getInstance(getContext())
